@@ -1,28 +1,29 @@
 
+
 import { Search, Users, Trophy, DollarSign } from "lucide-react";
 
 const features = [
   {
     name: "Get Discovered",
-    description: "Referrals are great—but limited. We help you become discoverable to founders and teams actively looking for your expertise.",
+    description: "Connect with a community of founders using AI to build their ideas—they need AI-enabled fractional thinkers like you to guide their journey.",
     icon: Search,
     gradient: "from-blue-500 to-cyan-500"
   },
   {
     name: "Grow Your Audience",
-    description: "Already writing a newsletter? Publish articles to our platform and tap into a like-minded community ready to read, share, and engage.",
+    description: "Already writing a newsletter? Publish articles to our platform and tap into a like-minded community of AI-forward founders ready to read, share, and engage.",
     icon: Users,
     gradient: "from-purple-500 to-pink-500"
   },
   {
     name: "Build Credibility & Thought Leadership",
-    description: "Share insights, answer questions, and contribute to discussions. Earn trust, grow your brand, and position yourself as a go-to expert.",
+    description: "Share AI insights, answer questions from founders building with AI, and contribute to discussions. Position yourself as the go-to expert for AI-enabled businesses.",
     icon: Trophy,
     gradient: "from-amber-500 to-orange-500"
   },
   {
     name: "Stabilize Revenue",
-    description: "We help you reduce feast-or-famine cycles by giving you visibility and tools to attract long-term, better-fit clients.",
+    description: "Access a steady stream of AI-forward founders who value fractional expertise. Reduce feast-or-famine cycles with clients who understand the future of business.",
     icon: DollarSign,
     gradient: "from-green-500 to-emerald-500"
   }
@@ -35,10 +36,10 @@ const ValuePropositions = () => {
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-base font-semibold leading-7 text-purple-600">What We Offer</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Everything you need to grow your fractional practice
+            Connect with AI-forward founders who need your expertise
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Stop struggling with the feast-or-famine cycle. Join a community designed specifically for fractional experts who want to scale.
+            Join a community where AI-enabled founders actively seek fractional experts to guide their ventures. Stop struggling with the feast-or-famine cycle.
           </p>
         </div>
         
@@ -65,3 +66,4 @@ const ValuePropositions = () => {
 };
 
 export default ValuePropositions;
+
