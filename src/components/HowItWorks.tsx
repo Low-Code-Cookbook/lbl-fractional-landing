@@ -1,4 +1,4 @@
-import { UserPlus, Video, MessageCircle, Users, PenTool } from "lucide-react";
+import { UserPlus, Video, MessageCircle, PenTool } from "lucide-react";
 
 const steps = [
   {
@@ -21,13 +21,6 @@ const steps = [
     icon: MessageCircle,
     color: "text-green-600",
     bgColor: "bg-green-100"
-  },
-  {
-    name: "Collaborate on Content",
-    description: "Record Q&A sessions with other experts",
-    icon: Users,
-    color: "text-pink-600",
-    bgColor: "bg-pink-100"
   },
   {
     name: "Publish Posts",
