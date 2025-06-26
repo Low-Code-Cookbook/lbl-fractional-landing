@@ -1,5 +1,4 @@
-
-import { UserPlus, Video, MessageCircle, Share2, Users, PenTool } from "lucide-react";
+import { UserPlus, Video, MessageCircle, Users, PenTool } from "lucide-react";
 
 const steps = [
   {
@@ -22,13 +21,6 @@ const steps = [
     icon: MessageCircle,
     color: "text-green-600",
     bgColor: "bg-green-100"
-  },
-  {
-    name: "Promote on LinkedIn",
-    description: "Share your contributions to boost reach and credibility",
-    icon: Share2,
-    color: "text-indigo-600",
-    bgColor: "bg-indigo-100"
   },
   {
     name: "Collaborate on Content",
