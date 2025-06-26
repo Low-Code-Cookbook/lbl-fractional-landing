@@ -47,7 +47,7 @@ const HowItWorks = () => {
         </div>
         
         <div className="mx-auto mt-16 max-w-6xl sm:mt-20 lg:mt-24">
-          <div className="grid grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {steps.map((step, index) => (
               <div key={step.name} className="relative group">
                 <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-lg transition-shadow duration-300 h-full">
@@ -67,7 +67,7 @@ const HowItWorks = () => {
                   </div>
                 </div>
                 {index < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-0.5 bg-gradient-to-r from-purple-300 to-transparent transform -translate-y-1/2"></div>
+                  <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-0.5 bg-gradient-to-r from-purple-300 to-transparent transform -translate-y-1/2"></div>
                 )}
               </div>
             ))}
