@@ -53,6 +53,14 @@ const Pricing = () => {
                   <span className="text-5xl font-bold tracking-tight text-gray-900">$59</span>
                   <span className="text-sm font-semibold leading-6 tracking-wide text-gray-600">USD</span>
                 </p>
+                <div className="mt-4 p-3 bg-green-50 rounded-lg border border-green-200">
+                  <p className="text-sm font-medium text-green-800">
+                    💰 Save with Annual Plan
+                  </p>
+                  <p className="text-xs text-green-700 mt-1">
+                    Pay yearly and get 2 months free!
+                  </p>
+                </div>
                 <Button 
                   size="lg" 
                   className="mt-10 w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 group"
