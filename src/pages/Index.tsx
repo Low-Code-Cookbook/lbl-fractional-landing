@@ -31,7 +31,7 @@ const Index = () => {
           <div className="text-center">
             <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 max-w-2xl mx-auto">
               <blockquote className="text-xl text-gray-700 mb-6">
-                "One of your accelerator members hired me actually. We were in the same cohort."
+                "One of your accelerator members hired me actually. We were in the same cohort. Connecting with other community members is the easiest way to build dealflow."
               </blockquote>
               <div className="border-t border-gray-100 pt-4">
                 <div className="flex items-center justify-center space-x-4">
