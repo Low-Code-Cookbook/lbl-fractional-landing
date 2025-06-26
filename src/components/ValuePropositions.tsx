@@ -1,3 +1,4 @@
+
 import { Search, Users, Trophy, DollarSign } from "lucide-react";
 
 const features = [
@@ -41,8 +42,8 @@ const ValuePropositions = () => {
           </p>
         </div>
         
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+        <div className="mx-auto mt-16 max-w-4xl sm:mt-20 lg:mt-24">
+          <dl className="grid grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-2">
             {features.map((feature) => (
               <div key={feature.name} className="flex flex-col group hover:scale-105 transition-transform duration-300">
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
