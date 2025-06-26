@@ -28,16 +28,7 @@ const testimonials = [
 const SocialProof = () => {
   return (
     <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Trusted by fractional experts everywhere
-          </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            See how other fractional professionals have transformed their practices with the Inner Circle.
-          </p>
-        </div>
-        
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">        
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-shadow duration-300">
