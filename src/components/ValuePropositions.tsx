@@ -1,5 +1,4 @@
-
-import { Search, Users, Trophy, DollarSign, Handshake } from "lucide-react";
+import { Search, Users, Trophy, DollarSign } from "lucide-react";
 
 const features = [
   {
@@ -25,12 +24,6 @@ const features = [
     description: "We help you reduce feast-or-famine cycles by giving you visibility and tools to attract long-term, better-fit clients.",
     icon: DollarSign,
     gradient: "from-green-500 to-emerald-500"
-  },
-  {
-    name: "Expand Through Collaboration",
-    description: "Fractionals need other fractionals. Partner on projects, cross-refer clients, and sharpen your edge through peer conversations.",
-    icon: Handshake,
-    gradient: "from-indigo-500 to-purple-500"
   }
 ];
 
