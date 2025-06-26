@@ -1,3 +1,4 @@
+
 import { UserPlus, Video, MessageCircle, PenTool } from "lucide-react";
 
 const steps = [
@@ -45,28 +46,28 @@ const HowItWorks = () => {
           </p>
         </div>
         
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+        <div className="mx-auto mt-16 max-w-6xl sm:mt-20 lg:mt-24">
+          <div className="grid grid-cols-4 gap-6">
             {steps.map((step, index) => (
               <div key={step.name} className="relative group">
-                <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-shadow duration-300 h-full">
-                  <div className="flex items-center mb-4">
-                    <div className={`rounded-lg p-3 ${step.bgColor} group-hover:scale-110 transition-transform duration-300`}>
+                <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-lg transition-shadow duration-300 h-full">
+                  <div className="flex flex-col items-center text-center">
+                    <div className={`rounded-lg p-3 ${step.bgColor} group-hover:scale-110 transition-transform duration-300 mb-3`}>
                       <step.icon className={`h-6 w-6 ${step.color}`} />
                     </div>
-                    <div className="ml-4 text-sm font-medium text-gray-500">
+                    <div className="text-sm font-medium text-gray-500 mb-2">
                       Step {index + 1}
                     </div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                      {step.name}
+                    </h3>
+                    <p className="text-sm text-gray-600">
+                      {step.description}
+                    </p>
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    {step.name}
-                  </h3>
-                  <p className="text-gray-600">
-                    {step.description}
-                  </p>
                 </div>
                 {index < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-purple-300 to-transparent transform -translate-y-1/2"></div>
+                  <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-0.5 bg-gradient-to-r from-purple-300 to-transparent transform -translate-y-1/2"></div>
                 )}
               </div>
             ))}
