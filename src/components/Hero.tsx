@@ -1,5 +1,6 @@
+
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Users, TrendingUp, Star } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -29,21 +30,6 @@ const Hero = () => {
             Join the Inner Circle
             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </Button>
-        </div>
-        
-        <div className="mt-16 flex justify-center items-center space-x-8 text-sm text-gray-500">
-          <div className="flex items-center">
-            <Users className="h-5 w-5 mr-2 text-purple-500" />
-            <span>500+ Active Members</span>
-          </div>
-          <div className="flex items-center">
-            <TrendingUp className="h-5 w-5 mr-2 text-green-500" />
-            <span>40% Revenue Growth</span>
-          </div>
-          <div className="flex items-center">
-            <Star className="h-5 w-5 mr-2 text-yellow-500" />
-            <span>4.9/5 Member Rating</span>
-          </div>
         </div>
       </div>
     </section>
