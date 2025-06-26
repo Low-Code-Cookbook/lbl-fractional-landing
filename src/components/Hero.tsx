@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="mx-auto max-w-4xl text-center">
         <div className="mb-8 flex justify-center">
           <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20 transition-all">
-            Join 500+ fractional experts growing their practice
+            Join 210+ founders & experts growing their practice
           </div>
         </div>
         
