@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
@@ -9,7 +10,7 @@ const Hero = () => {
           <img 
             src="https://cdn.launchbylunch.co/assets/logos/inner-circle-logo.png" 
             alt="Inner Circle Logo" 
-            className="h-32 w-auto"
+            className="h-40 w-auto"
           />
         </div>
         
