@@ -17,7 +17,7 @@ const Footer = () => {
             <Button 
               size="lg" 
               className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 px-8 py-3 text-lg group"
-              onClick={() => window.open('https://launchbylunch.co/community', '_blank')}
+              onClick={() => window.open('https://innercircle.launchbylunch.co/checkout/inner-circle-membership', '_blank')}
             >
               Join the Inner Circle
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

@@ -64,7 +64,7 @@ const Pricing = () => {
                 <Button 
                   size="lg" 
                   className="mt-10 w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 group"
-                  onClick={() => window.open('https://launchbylunch.co/community', '_blank')}
+                  onClick={() => window.open('https://innercircle.launchbylunch.co/checkout/inner-circle-membership', '_blank')}
                 >
                   Get started today
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
