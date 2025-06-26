@@ -3,7 +3,6 @@ import Hero from "@/components/Hero";
 import ValuePropositions from "@/components/ValuePropositions";
 import HowItWorks from "@/components/HowItWorks";
 import Pricing from "@/components/Pricing";
-import SocialProof from "@/components/SocialProof";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -13,7 +12,6 @@ const Index = () => {
       <ValuePropositions />
       <HowItWorks />
       <Pricing />
-      <SocialProof />
       <Footer />
     </div>
   );
