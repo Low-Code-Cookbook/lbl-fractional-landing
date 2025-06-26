@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
@@ -12,12 +11,6 @@ const Hero = () => {
             alt="Inner Circle Logo" 
             className="h-32 w-auto"
           />
-        </div>
-        
-        <div className="mb-8 justify-center hidden md:flex">
-          <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20 transition-all">
-            Join 210+ founders & experts growing their practice
-          </div>
         </div>
         
         <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 bg-clip-text text-transparent">
