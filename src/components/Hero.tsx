@@ -10,7 +10,7 @@ const Hero = () => {
           <img 
             src="https://cdn.launchbylunch.co/assets/logos/inner-circle-logo.png" 
             alt="Inner Circle Logo" 
-            className="h-16 w-auto"
+            className="h-24 w-auto"
           />
         </div>
         
