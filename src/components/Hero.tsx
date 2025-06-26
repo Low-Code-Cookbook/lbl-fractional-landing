@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, TrendingUp, Star } from "lucide-react";
 
@@ -21,7 +20,7 @@ const Hero = () => {
           Join the Launch by Lunch Inner Circle — where fractional CTOs, CROs, CPOs, and expert operators build their reputation, grow their revenue, and expand their reach.
         </p>
         
-        <div className="mt-10 flex items-center justify-center gap-x-6">
+        <div className="mt-10 flex items-center justify-center">
           <Button 
             size="lg" 
             className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 px-8 py-3 text-lg group"
@@ -29,9 +28,6 @@ const Hero = () => {
           >
             Join the Inner Circle
             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
-          <Button variant="outline" size="lg" className="px-8 py-3 text-lg border-purple-200 text-purple-700 hover:bg-purple-50">
-            Learn More
           </Button>
         </div>
         
