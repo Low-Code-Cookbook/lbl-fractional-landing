@@ -6,6 +6,14 @@ const Hero = () => {
   return (
     <section className="px-6 py-20 lg:px-8 lg:py-32">
       <div className="mx-auto max-w-4xl text-center">
+        <div className="mb-8 flex justify-center">
+          <img 
+            src="https://cdn.launchbylunch.co/assets/logos/inner-circle-logo.png" 
+            alt="Inner Circle Logo" 
+            className="h-16 w-auto"
+          />
+        </div>
+        
         <div className="mb-8 justify-center hidden md:flex">
           <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20 transition-all">
             Join 210+ founders & experts growing their practice
