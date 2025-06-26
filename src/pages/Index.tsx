@@ -34,8 +34,17 @@ const Index = () => {
                 "One of your accelerator members hired me actually. We were in the same cohort."
               </blockquote>
               <div className="border-t border-gray-100 pt-4">
-                <div className="font-semibold text-gray-900">Jamie</div>
-                <div className="text-sm text-purple-600">Inner Circle Member</div>
+                <div className="flex items-center justify-center space-x-4">
+                  <img 
+                    src="/lovable-uploads/2911f019-445e-4c4d-8057-23611396794e.png" 
+                    alt="Jamie" 
+                    className="w-12 h-12 rounded-full object-cover"
+                  />
+                  <div className="text-left">
+                    <div className="font-semibold text-gray-900">Jamie</div>
+                    <div className="text-sm text-purple-600">Inner Circle Member</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
