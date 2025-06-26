@@ -25,6 +25,23 @@ const Index = () => {
         </div>
       </section>
       
+      {/* Testimonial section */}
+      <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
+        <div className="mx-auto max-w-4xl px-6 lg:px-8">
+          <div className="text-center">
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 max-w-2xl mx-auto">
+              <blockquote className="text-xl text-gray-700 mb-6">
+                "One of your accelerator members hired me actually. We were in the same cohort."
+              </blockquote>
+              <div className="border-t border-gray-100 pt-4">
+                <div className="font-semibold text-gray-900">Jamie</div>
+                <div className="text-sm text-purple-600">Inner Circle Member</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       <Pricing />
       <Footer />
     </div>
