@@ -10,6 +10,7 @@ import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { AlertDialog, AlertDialogAction, AlertDialogContent, AlertDialogDescription, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
 import { useToast } from "@/hooks/use-toast";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -40,6 +41,7 @@ type FormData = z.infer<typeof formSchema>;
 
 const Apply = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
   const { toast } = useToast();
 
   const form = useForm<FormData>({
@@ -117,10 +119,8 @@ const Apply = () => {
           // Don't show error to user since application was successful
         }
 
-        toast({
-          title: "Application Submitted!",
-          description: "Thank you for your application. We'll review it and get back to you soon. Check your email for confirmation.",
-        });
+        // Show success modal instead of toast
+        setShowSuccessModal(true);
         form.reset();
       }
     } catch (error) {
@@ -416,6 +416,21 @@ const Apply = () => {
             </Form>
           </CardContent>
         </Card>
+
+        {/* Success Modal */}
+        <AlertDialog open={showSuccessModal} onOpenChange={setShowSuccessModal}>
+          <AlertDialogContent>
+            <AlertDialogHeader>
+              <AlertDialogTitle>Application Submitted Successfully!</AlertDialogTitle>
+              <AlertDialogDescription>
+                Thank you for your application to join the Inner Circle. You'll receive a confirmation email shortly, and we'll be in touch within 5-7 business days to let you know the next steps.
+              </AlertDialogDescription>
+            </AlertDialogHeader>
+            <AlertDialogAction onClick={() => setShowSuccessModal(false)}>
+              Got it, thanks!
+            </AlertDialogAction>
+          </AlertDialogContent>
+        </AlertDialog>
       </div>
     </div>
   );
