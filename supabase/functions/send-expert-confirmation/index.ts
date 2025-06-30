@@ -29,9 +29,9 @@ const handler = async (req: Request): Promise<Response> => {
     console.log(`Sending confirmation email to ${email} for ${firstName} ${lastName}`);
 
     const emailResponse = await resend.emails.send({
-      from: "Launch by Lunch <welcome@send.launchbyLunch.co>",
+      from: "Launch by Lunch <welcome@launchbylunch.co>",
       to: [email],
-      bcc: ["welcome@launchbyLunch.co"],
+      bcc: ["welcome@launchbylunch.co"],
       subject: "We received your Inner Circle application!",
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
