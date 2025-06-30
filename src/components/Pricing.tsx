@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Check, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const features = [
   "Access to founder and startup network",
@@ -64,10 +65,12 @@ const Pricing = () => {
                 <Button 
                   size="lg" 
                   className="mt-10 w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 group"
-                  onClick={() => window.open('https://innercircle.launchbylunch.co/checkout/inner-circle-membership', '_blank')}
+                  asChild
                 >
-                  Get started today
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  <Link to="/apply">
+                    Get started today
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
                 </Button>
                 <p className="mt-6 text-xs leading-5 text-gray-600">
                   Cancel anytime. No long-term commitment required.
