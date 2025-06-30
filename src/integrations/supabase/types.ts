@@ -92,6 +92,7 @@ export type Database = {
           last_name: string
           linkedin: string | null
           marketing_time: string
+          open_to_clients: string
           professional_brand: string
           success_definition: string
           success_other: string | null
@@ -107,6 +108,7 @@ export type Database = {
           last_name: string
           linkedin?: string | null
           marketing_time: string
+          open_to_clients?: string
           professional_brand: string
           success_definition: string
           success_other?: string | null
@@ -122,6 +124,7 @@ export type Database = {
           last_name?: string
           linkedin?: string | null
           marketing_time?: string
+          open_to_clients?: string
           professional_brand?: string
           success_definition?: string
           success_other?: string | null
