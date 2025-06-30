@@ -12,7 +12,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { AlertDialog, AlertDialogAction, AlertDialogContent, AlertDialogDescription, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
 import { useToast } from "@/hooks/use-toast";
 import { ArrowLeft } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 
 const formSchema = z.object({
@@ -50,6 +50,7 @@ const Apply = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const { toast } = useToast();
+  const navigate = useNavigate();
 
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
@@ -140,6 +141,12 @@ const Apply = () => {
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  const handleSuccessModalClose = () => {
+    setShowSuccessModal(false);
+    form.reset();
+    navigate('/');
   };
 
   return (
@@ -433,7 +440,7 @@ const Apply = () => {
                 Thank you for your application to join the Inner Circle. You'll receive a confirmation email shortly, and we'll be in touch within 5-7 business days to let you know the next steps.
               </AlertDialogDescription>
             </AlertDialogHeader>
-            <AlertDialogAction onClick={() => setShowSuccessModal(false)}>
+            <AlertDialogAction onClick={handleSuccessModalClose}>
               Got it, thanks!
             </AlertDialogAction>
           </AlertDialogContent>
