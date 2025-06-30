@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -25,7 +24,15 @@ const formSchema = z.object({
   hasNewsletter: z.enum(["yes", "no"], {
     required_error: "Please select whether you have a newsletter",
   }),
-  linkedIn: z.string().url("Please enter a valid LinkedIn URL").optional().or(z.literal("")),
+  linkedIn: z.string()
+    .min(1, "LinkedIn profile is required")
+    .url("Please enter a valid URL")
+    .refine(
+      (url) => {
+        return url.includes('linkedin.com/in/') || url.includes('linkedin.com/pub/');
+      },
+      "Please enter a valid LinkedIn profile URL (e.g., https://www.linkedin.com/in/yourprofile)"
+    ),
   professionalBrand: z.string().min(50, "Please provide at least 50 characters about your professional brand"),
   marketingTime: z.string().min(1, "Please specify the percentage of time spent on marketing"),
   successDefinition: z.enum(["remain-fractional", "find-fulltime", "find-cofounder", "other"], {
@@ -79,7 +86,7 @@ const Apply = () => {
             website: data.website || null,
             fractional_experience: data.fractionalExperience,
             has_newsletter: data.hasNewsletter,
-            linkedin: data.linkedIn || null,
+            linkedin: data.linkedIn,
             professional_brand: data.professionalBrand,
             marketing_time: data.marketingTime,
             success_definition: data.successDefinition,
@@ -277,9 +284,9 @@ const Apply = () => {
                   name="linkedIn"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>LinkedIn Profile (Optional)</FormLabel>
+                      <FormLabel>LinkedIn Profile</FormLabel>
                       <FormControl>
-                        <Input placeholder="https://linkedin.com/in/yourprofile" {...field} />
+                        <Input placeholder="https://www.linkedin.com/in/yourprofile" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
