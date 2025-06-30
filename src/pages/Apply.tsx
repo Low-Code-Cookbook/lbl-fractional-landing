@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -13,6 +12,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { useToast } from "@/hooks/use-toast";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import { supabase } from "@/integrations/supabase/client";
 
 const formSchema = z.object({
   firstName: z.string().min(1, "First name is required"),
@@ -60,18 +60,51 @@ const Apply = () => {
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    console.log("Application submitted:", data);
-    
-    toast({
-      title: "Application Submitted!",
-      description: "Thank you for your application. We'll review it and get back to you soon.",
-    });
-    
-    setIsSubmitting(false);
-    form.reset();
+    try {
+      // Insert the application data into Supabase
+      const { error } = await supabase
+        .from('expert_applications')
+        .insert([
+          {
+            first_name: data.firstName,
+            last_name: data.lastName,
+            email: data.email,
+            website: data.website || null,
+            fractional_experience: data.fractionalExperience,
+            has_newsletter: data.hasNewsletter,
+            linkedin: data.linkedIn || null,
+            professional_brand: data.professionalBrand,
+            marketing_time: data.marketingTime,
+            success_definition: data.successDefinition,
+            success_other: data.successOther || null,
+          }
+        ]);
+
+      if (error) {
+        console.error('Error submitting application:', error);
+        toast({
+          title: "Error",
+          description: "There was a problem submitting your application. Please try again.",
+          variant: "destructive",
+        });
+      } else {
+        console.log("Application submitted successfully:", data);
+        toast({
+          title: "Application Submitted!",
+          description: "Thank you for your application. We'll review it and get back to you soon.",
+        });
+        form.reset();
+      }
+    } catch (error) {
+      console.error('Unexpected error:', error);
+      toast({
+        title: "Error",
+        description: "An unexpected error occurred. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (

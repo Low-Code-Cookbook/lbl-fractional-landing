@@ -81,6 +81,54 @@ export type Database = {
         }
         Relationships: []
       }
+      expert_applications: {
+        Row: {
+          created_at: string
+          email: string
+          first_name: string
+          fractional_experience: string
+          has_newsletter: string
+          id: string
+          last_name: string
+          linkedin: string | null
+          marketing_time: string
+          professional_brand: string
+          success_definition: string
+          success_other: string | null
+          website: string | null
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          first_name: string
+          fractional_experience: string
+          has_newsletter: string
+          id?: string
+          last_name: string
+          linkedin?: string | null
+          marketing_time: string
+          professional_brand: string
+          success_definition: string
+          success_other?: string | null
+          website?: string | null
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          first_name?: string
+          fractional_experience?: string
+          has_newsletter?: string
+          id?: string
+          last_name?: string
+          linkedin?: string | null
+          marketing_time?: string
+          professional_brand?: string
+          success_definition?: string
+          success_other?: string | null
+          website?: string | null
+        }
+        Relationships: []
+      }
       teardown_applications: {
         Row: {
           application_description: string
