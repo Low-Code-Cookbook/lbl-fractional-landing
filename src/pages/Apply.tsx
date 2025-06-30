@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -30,6 +31,9 @@ const formSchema = z.object({
     required_error: "Please select what success means to you",
   }),
   successOther: z.string().optional(),
+  openToClients: z.enum(["yes", "no"], {
+    required_error: "Please select whether you're open to new clients",
+  }),
 });
 
 type FormData = z.infer<typeof formSchema>;
@@ -52,6 +56,7 @@ const Apply = () => {
       marketingTime: "",
       successDefinition: undefined,
       successOther: "",
+      openToClients: undefined,
     },
   });
 
@@ -77,6 +82,7 @@ const Apply = () => {
             marketing_time: data.marketingTime,
             success_definition: data.successDefinition,
             success_other: data.successOther || null,
+            open_to_clients: data.openToClients,
           }
         ]);
 
@@ -309,6 +315,34 @@ const Apply = () => {
                           placeholder="e.g., 20% or 10 hours per week"
                           {...field} 
                         />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                {/* Client Opportunities */}
+                <FormField
+                  control={form.control}
+                  name="openToClients"
+                  render={({ field }) => (
+                    <FormItem className="space-y-3">
+                      <FormLabel>Are you open to projects or new fractional clients who might come from the community?</FormLabel>
+                      <FormControl>
+                        <RadioGroup
+                          onValueChange={field.onChange}
+                          defaultValue={field.value}
+                          className="flex flex-col space-y-2"
+                        >
+                          <div className="flex items-center space-x-2">
+                            <RadioGroupItem value="yes" id="clients-yes" />
+                            <Label htmlFor="clients-yes">Yes, I'm open to new client opportunities</Label>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <RadioGroupItem value="no" id="clients-no" />
+                            <Label htmlFor="clients-no">No, I'm not looking for new clients right now</Label>
+                          </div>
+                        </RadioGroup>
                       </FormControl>
                       <FormMessage />
                     </FormItem>
