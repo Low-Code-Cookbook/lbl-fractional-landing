@@ -89,9 +89,31 @@ const Apply = () => {
         });
       } else {
         console.log("Application submitted successfully:", data);
+        
+        // Send confirmation email
+        try {
+          const emailResponse = await supabase.functions.invoke('send-expert-confirmation', {
+            body: {
+              firstName: data.firstName,
+              lastName: data.lastName,
+              email: data.email,
+            },
+          });
+
+          if (emailResponse.error) {
+            console.error('Error sending confirmation email:', emailResponse.error);
+            // Don't show error to user since application was successful
+          } else {
+            console.log('Confirmation email sent successfully');
+          }
+        } catch (emailError) {
+          console.error('Unexpected error sending email:', emailError);
+          // Don't show error to user since application was successful
+        }
+
         toast({
           title: "Application Submitted!",
-          description: "Thank you for your application. We'll review it and get back to you soon.",
+          description: "Thank you for your application. We'll review it and get back to you soon. Check your email for confirmation.",
         });
         form.reset();
       }
