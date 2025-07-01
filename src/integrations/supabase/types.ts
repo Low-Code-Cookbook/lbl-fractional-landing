@@ -94,6 +94,7 @@ export type Database = {
           marketing_time: string
           open_to_clients: string
           professional_brand: string
+          status: string
           success_definition: string
           success_other: string | null
           website: string | null
@@ -110,6 +111,7 @@ export type Database = {
           marketing_time: string
           open_to_clients?: string
           professional_brand: string
+          status?: string
           success_definition: string
           success_other?: string | null
           website?: string | null
@@ -126,6 +128,7 @@ export type Database = {
           marketing_time?: string
           open_to_clients?: string
           professional_brand?: string
+          status?: string
           success_definition?: string
           success_other?: string | null
           website?: string | null
